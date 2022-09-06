@@ -12,8 +12,8 @@ User.hasMany(Books, {
 })
 Books.belongsTo(User)
 const resetDb = async () => {
-  // await seq.sync({ force: true }) //重置清空数据库
-  // await initDb({ User }) //初始化管理员数据
+  await seq.sync({ force: true }) //初始化数据库
+  await initDb({ User }) //初始化管理员数据
   // await seq.sync({ alter: true }) //必要的更新与模型匹配
 }
 resetDb()

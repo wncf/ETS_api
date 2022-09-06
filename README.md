@@ -24,6 +24,7 @@
 克隆本仓库
 安装依赖
 > npm i or yarn install
-复制.env.examples文件，修改为.env文件，按自身需求进行修改
-
-后续内容：邮件服务，权限系统以及菜单系统
+复制.env.examples文件，修改为.env文件，按自身需求进行修改  
+需要`src/model/index.js`下取消注释`初始化数据库`代码在运行即可自动完成建表
+> npm run dev or yarn dev 启动服务
+后续可能更新内容：邮件服务，权限系统以及菜单系统
