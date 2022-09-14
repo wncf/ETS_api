@@ -1,4 +1,4 @@
-### koa2-Api基础脚手架
+### Ets_api(Efficiency tool station)
 - 使用 dotenv 进行环境变量的加载注入
 - 使用 nodemon 开发检测文件改变时自动重启服务器 
 - 使用 bcryptjs 进行密码加密
@@ -22,7 +22,11 @@
 克隆本仓库
 安装依赖
 > npm i or yarn install
+<<<<<<< HEAD
 复制.env.examples文件，修改为.env文件，按自身需求进行修改  
 在建表完成后默认通过src/model/index.js下的`initDb()`添加默认管理员等数据
 > npm run dev or yarn dev 启动服务
 后续可能更新内容：邮件服务，权限系统
+=======
+复制.env.examples文件，修改为.env文件，按自身需求进行修改
+>>>>>>> 532ef63 (updat4ee readme)
