@@ -19,7 +19,6 @@ const verifyUser = async (ctx, next) => {
       return
     }
   } catch (err) {
-    console.err('获取用户信息失败', err)
     ctx.app.emit('error', userRegisterError, ctx)
   }
   await next()

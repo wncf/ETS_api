@@ -35,7 +35,7 @@ class MenuService {
       }
       return res || {}
     } catch (err) {
-      console.err(err)
+      console.error(err)
     }
   }
   async UpdateRoleMenuServe({ id, role = [] }) {
@@ -97,7 +97,7 @@ class MenuService {
         data: rows,
       }
     } catch (err) {
-      console.err(err)
+      console.error(err)
     }
   }
 }
