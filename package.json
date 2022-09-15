@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon ./src/main.js --model dev",
-    "prd": "node ./src/main.js --model prd"
+    "build": "node ./src/main.js --model prd"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
