@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm run start",
   "builds": [
     {
-      "src": "./src/main.js",
+      "src": "./index.js",
       "use": "@vercel/node"
     }
   ],
