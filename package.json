@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./src/main.js --model dev",
-    "build": "node ./src/main.js --model prd"
+    "start": "node ./src/main.js --model prd",
+    "dev": "nodemon ./src/main.js --model dev"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
