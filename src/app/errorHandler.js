@@ -9,7 +9,7 @@ module.exports = (err, ctx) => {
       status = 409
       break
     default:
-      status = 404
+      status = 200
   }
   ctx.status = status
   ctx.body = err
