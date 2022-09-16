@@ -8,6 +8,9 @@ module.exports = (err, ctx) => {
     case '102':
       status = 409
       break
+    case 1099:
+      status = 404
+      break
     default:
       status = 500
   }
