@@ -12,8 +12,9 @@ const PagingValidator = async (ctx, next) => {
         type: 'number',
         required: false,
       },
-      total: {
-        type: 'number', //一共有几页
+      // 排序
+      sortBy: {
+        type: 'object',
         required: false,
       },
     })
@@ -22,6 +23,25 @@ const PagingValidator = async (ctx, next) => {
   }
   await next()
 }
+const DeleteArry = async (ctx, next) => {
+  try {
+    ctx.verifyParams({
+      list: {
+        type: 'array',
+        itemType: 'number',
+      },
+      isPmenu: {
+        type: 'boolean',
+        required: false,
+      },
+    })
+  } catch (err) {
+    console.log(err)
+    return ctx.app.emit('error', parameterError(err.errors), ctx)
+  }
+  await next()
+}
 module.exports = {
   PagingValidator,
+  DeleteArry,
 }

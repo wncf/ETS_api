@@ -3,7 +3,7 @@ const { tokenExpiredError, invalidToekn, SyntaxToken, hasNotAdminPermission } = 
 const { JWT_SECRET } = require('../config/config.default')
 const auth = async (ctx, next) => {
   try {
-    const { authorization } = ctx.request.header
+    const { authorization = '' } = ctx.request.header
     const token = authorization.replace('Bearer ', '')
     const user = jwt.verify(token, JWT_SECRET)
     ctx.state.user = user
@@ -18,6 +18,8 @@ const auth = async (ctx, next) => {
       case 'SyntaxError':
         console.error('token错误', err)
         return ctx.app.emit('error', SyntaxToken, ctx)
+      default:
+        console.error('token解析时发生未知错误', err)
     }
   }
   await next()
@@ -31,5 +33,6 @@ const hadAdminPermission = async (ctx, next) => {
   await next()
 }
 module.exports = {
-  auth, hadAdminPermission
+  auth,
+  hadAdminPermission,
 }

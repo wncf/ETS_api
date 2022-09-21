@@ -51,7 +51,6 @@ class BooksController {
         }
       }
     } catch (err) {
-      console.error(err)
       ctx.app.emit('error', bookUpdateError, ctx)
     }
   }

@@ -29,6 +29,11 @@ const seq = new Sequelize(MYSQL_DB, MYSQL_USER, MYSQL_PWD, {
     dateStrings: true,
     typeCast: true,
   },
+  hooks: {
+    afterValidate: (record, options) => {
+      // console.log('hellow', options)
+    },
+  },
 })
 const hasSqlSuccess = async () => {
   try {
@@ -41,5 +46,4 @@ const hasSqlSuccess = async () => {
 if (MODE === 'dev') {
   hasSqlSuccess()
 }
-Sequelize
 module.exports = seq

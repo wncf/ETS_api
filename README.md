@@ -10,21 +10,19 @@
 
 
 现有接口:
-- 用户注册
-- 用户登录并颁发token
+- 用户注册登录并颁发token
 - 用户头像默认头像修改
 - 修改密码
 - 书签的crud以及批量新增，删除
 - 静态资源输出
   默认导出public下所有资源
   例如默认图片可通过http://127.0.0.1:8000/user/default_user_avatar.png 访问
-
-
+- 菜单系统
 如何部署？
 克隆本仓库
 安装依赖
 > npm i or yarn install
 复制.env.examples文件，修改为.env文件，按自身需求进行修改  
-需要`src/model/index.js`下取消注释`初始化数据库`代码在运行即可自动完成建表
+在建表完成后默认通过src/model/index.js下的`initDb()`添加默认管理员等数据
 > npm run dev or yarn dev 启动服务
-后续可能更新内容：邮件服务，权限系统以及菜单系统
+后续可能更新内容：邮件服务，权限系统

@@ -1,10 +1,11 @@
 module.exports = (err, ctx) => {
   let status = 500
-  switch (err.code) {
-    case '10001':
-      status = 400
+  const code = err.code ? err.code + ''.substring(0, 3) : 100
+  switch (code) {
+    case '101':
+      status = 401
       break
-    case '10002':
+    case '102':
       status = 409
       break
     default:

@@ -3,8 +3,8 @@ module.exports = {
   parameterError(errors) {
     return {
       code: 1099,
-      message: `${errors[0].field} ${errors[0].message}`,
-      surplusError: errors.length - 1,
+      message: errors ? `${errors[0].field} ${errors[0].message}` : '',
+      surplusError: errors ? errors.length - 1 : 0,
       success: false,
     }
   },
@@ -89,7 +89,7 @@ module.exports = {
     success: false,
   },
   hasNotAdminPermission: {
-    code: '10104',
+    code: '10999',
     message: '无管理员权限',
     result: '',
     success: false,
