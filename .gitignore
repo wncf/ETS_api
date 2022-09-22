@@ -1,5 +1,6 @@
+.yarn.lock
 node_modules
-.env*
-
-/public/user_uploads/
+.env.dev
+.env.prd
 .vercel
+/public/user_uploads/
