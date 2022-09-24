@@ -36,6 +36,7 @@ class UserController {
         success: true,
         result: {
           avatarUrl,
+          userId: res.id,
           isAdmin: res.is_admin,
           token: jwt.sign(res, JWT_SECRET, {
             expiresIn: '1d',
